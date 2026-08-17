@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import libreria_funciones as lf 
 
 st.title("Especialización Python for Analytics")
 st.sidebar.title("Parámetros")
@@ -28,3 +29,13 @@ elif modulos == "Módulo Arreglos":
   
 else:
   st.write("Bienvenido al módulo de Funciones")
+
+  capital_inicial = st.number_input("Capital inicial", min_value=0.0, value=1000.0)
+  tiempo_meses = st.number_input("Tiempo en meses", min_value=1, value=12)
+  tasa_porcentaje = st.number_input("Tasa de interés anual (%)", min_value=0.0, value=0.05)
+
+  
+
+
+
+
