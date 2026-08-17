@@ -212,3 +212,23 @@ def disponibilidad_servicio(total_horas, horas_caida, mantenimientos_programados
     disponibilidad_ajustada = disponibilidad - penalizacion_pct
 
     return max(disponibilidad_ajustada, 0)
+
+
+def interes_simple(capital = 1000,tasa = 0.01,periodos = 12):   # Documentación de funciones
+  
+  """
+  Calcula la cuota periódica de un préstamo.
+
+  Parámetros (Args):
+  
+    capital (float): Capital o monto inicial del préstamo.
+    tasa (float): Tasa de interés por período expresada en formato decimal.
+    periodos (int): Número total de cuotas.
+
+  Returns:
+    float: Cuota periódica calculada.
+  """
+
+  factor = (1+tasa)**periodos
+  interes = capital*((tasa*factor)/(factor-1))
+  return interes
