@@ -1,4 +1,5 @@
 import streamlit as st
+import numpy as np
 
 st.title("Especialización Python for Analytics")
 st.sidebar.title("Parámetros")
@@ -20,5 +21,10 @@ if modulos == "Módulo Listas":
 
 elif modulos == "Módulo Arreglos":
   st.write("Bienvenido al módulo de Arreglos")
+  
+  cantidad_elementos = st.slider("Seleccione la cantidad de elementos de su arreglo")
+  cantidad_arreglo = np.arange(cantidad_elementos)
+  st.write(cantidad_arreglo)
+  
 else:
   st.write("Bienvenido al módulo de Funciones")
