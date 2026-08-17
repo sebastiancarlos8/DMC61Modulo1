@@ -214,7 +214,7 @@ def disponibilidad_servicio(total_horas, horas_caida, mantenimientos_programados
     return max(disponibilidad_ajustada, 0)
 
 
-def interes_simple(capital = 1000,tasa = 0.01,periodos = 12):   # Documentación de funciones
+def interes_simple(capital_inicial = 0,tiempo_meses=1, tasa_interes = 0.05):   # Documentación de funciones
   
   """
   Calcula la cuota periódica de un préstamo.
