@@ -229,6 +229,5 @@ def interes_simple(capital_inicial = 0,tiempo_meses=1, tasa_interes = 0.05):   #
     float: Cuota periódica calculada.
   """
 
-  factor = (1+tasa)**periodos
-  interes = capital*((tasa*factor)/(factor-1))
+  interes = capital_inicial*tasa_interes*(tiempo_meses/12)
   return interes
