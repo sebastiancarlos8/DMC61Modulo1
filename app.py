@@ -37,7 +37,7 @@ elif modulos == "Archivos":
   
     if archivo.name.endswith(".csv"):
      datos = pd.read_csv(archivo)
-    elif archivo.name.endsith(".xlsx"):
+    elif archivo.name.endswith(".xlsx"):
       datos = pd.read_excel(archivo)
   
   else:
