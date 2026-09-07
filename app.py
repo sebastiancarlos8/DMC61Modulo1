@@ -37,8 +37,11 @@ elif modulos == "Archivos":
   
     if archivo.name.endswith(".csv"):
      datos = pd.read_csv(archivo)
+     st.write(datos)
+      
     elif archivo.name.endswith(".xlsx"):
       datos = pd.read_excel(archivo)
+      st.write(datos)
   
   else:
     st.write("Cargue su archivo")
