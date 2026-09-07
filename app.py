@@ -26,7 +26,11 @@ elif modulos == "Módulo Arreglos":
   cantidad_elementos = st.slider("Seleccione la cantidad de elementos de su arreglo")
   cantidad_arreglo = np.arange(cantidad_elementos)
   st.write(cantidad_arreglo)
-  
+
+elif modulos == "Archivos":
+  st.write("Bienvenido al módulo de Archivos")
+  archivo = st.sidebar.file_uploader("Seleccione su archivo")
+
 else:
   st.write("Bienvenido al módulo de Funciones")
 
