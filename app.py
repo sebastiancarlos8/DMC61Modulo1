@@ -9,7 +9,7 @@ st.write("Elaborado por: Sebastian Carlos")
 st.image("Python_logo.png", width = 300)
 st.sidebar.image("DMC.png", width = 100)
 
-modulos = st.sidebar.selectbox("Seleccione un módulo",["Módulo Listas","Módulo Arreglos","Módulo Funciones"])
+modulos = st.sidebar.selectbox("Seleccione un módulo",["Módulo Listas","Módulo Arreglos","Módulo Funciones","Archivos"])
 
 if modulos == "Módulo Listas":
   st.write("Bienvenido al módulo de Listas")
