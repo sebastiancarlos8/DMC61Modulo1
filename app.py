@@ -32,16 +32,16 @@ elif modulos == "Archivos":
   st.write("Bienvenido al módulo de Archivos")
   archivo = st.sidebar.file_uploader("Seleccione su archivo")
 
-if archivo is not None:
-  st.write("Su archivo ha sido cargado")
-
-  if archivo.name.edswith(".csv"):
-   datos = pd.read_csv(archivo)
-  elif archivo.name.endsith(".xlsx"):
-    datos = pd.read_excel(archivo)
-
-else:
-  st.write("Cargue su archivo")
+  if archivo is not None:
+    st.write("Su archivo ha sido cargado")
+  
+    if archivo.name.edswith(".csv"):
+     datos = pd.read_csv(archivo)
+    elif archivo.name.endsith(".xlsx"):
+      datos = pd.read_excel(archivo)
+  
+  else:
+    st.write("Cargue su archivo")
 
 else:
   st.write("Bienvenido al módulo de Funciones")
