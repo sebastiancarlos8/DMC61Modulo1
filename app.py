@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import libreria_funciones as lf 
+import pandas as pd
 
 st.title("Especialización Python for Analytics")
 st.sidebar.title("Parámetros")
@@ -30,6 +31,17 @@ elif modulos == "Módulo Arreglos":
 elif modulos == "Archivos":
   st.write("Bienvenido al módulo de Archivos")
   archivo = st.sidebar.file_uploader("Seleccione su archivo")
+
+if archivo is not None:
+  st.write("Su archivo ha sido cargado")
+
+  if archivo.name.edswith(".csv"):
+   datos = pd.read_csv(archivo)
+  elif archivo.name.endsith(".xlsx"):
+    datos = pd.read_excel(archivo)
+
+else:
+  st.write("Cargue su archivo")
 
 else:
   st.write("Bienvenido al módulo de Funciones")
